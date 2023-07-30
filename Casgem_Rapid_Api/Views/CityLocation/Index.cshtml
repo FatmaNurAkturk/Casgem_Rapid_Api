@@ -1,0 +1,27 @@
+﻿@model List<LocationCitynameViewModel>
+@{
+    Layout = null;
+}
+
+<link href="c:\users\lenovo\source\repos\casgem_rapid_api\casgem_rapid_api\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css" rel="stylesheet" />
+
+<form method="get">
+
+<div class="container">
+    <br /><br />
+    <label>Şehir adını giriniz</label>
+    <input type="text"  name="cityname"/>
+<br />
+    <button class="btn btn-dark"> Şehir Id Getir</button>
+
+    <table class="table table-hover">
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td>@item.dest_id</td>
+            </tr>
+        }
+    </table>
+
+</div>
+</form>
